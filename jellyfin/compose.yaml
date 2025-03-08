@@ -1,0 +1,22 @@
+networks:
+  default:
+    external: true
+    name: proxy
+
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=997
+      - PGID=997
+      - UMASK=002
+      - TZ=Europe/Paris
+    volumes:
+      - /docker/appdata/jellyfin/config:/config
+      - /docker/appdata/jellyfin/cache:/cache
+      - /data/media:/media
+    ports:
+      - 8096:8096
+      - 7359:7359/udp
+    restart: unless-stopped
