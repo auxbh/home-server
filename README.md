@@ -10,10 +10,10 @@ STORAGE: 512GB M.2 SSD
 ### Services list:
 Name                | Purpose                | Status
 ------------------- | ---------------------- | -------
+Caddy               | Reverse proxy          | Running
 Crafty Controller   | Minecraft server panel | Running
 Home Assistant      | Home automation        | Running
 Jellyfin            | Media library          | Running
-Nginx Proxy Manager | Reverse proxy          | Running
 Palworld Server     | Palworld server        | Unused
 Pterodactyl         | General game server    | Running
 qBittorrent         | Torrent client         | Stopped

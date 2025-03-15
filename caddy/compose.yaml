@@ -1,0 +1,18 @@
+networks:
+  default:
+    external: true
+    name: proxy
+
+services:
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - /docker/appdata/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /srv:/srv
+      - /docker/appdata/caddy/data:/data
+      - /docker/appdata/caddy/config:/config
