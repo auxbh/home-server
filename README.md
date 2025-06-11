@@ -12,6 +12,7 @@ Name                | Purpose                | Status
 ------------------- | ---------------------- | -------
 Caddy               | Reverse proxy          | Running
 Crafty Controller   | Minecraft server panel | Running
+File Browser        | Files sharing          | Running
 Gluetun             | VPN Client             | Stopped
 Home Assistant      | Home automation        | Running
 Jellyfin            | Media library          | Running
