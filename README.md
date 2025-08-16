@@ -7,15 +7,17 @@ CPU: AMD Ryzen 5 5500U<br>
 RAM: 32GB DDR4<br>
 STORAGE: 512GB M.2 SSD
 
-### Services list:
-Name                | Purpose                | Status
-------------------- | ---------------------- | -------
-Caddy               | Reverse proxy          | Running
-Crafty Controller   | Minecraft server panel | Running
-File Browser        | Files sharing          | Running
-Gluetun             | VPN Client             | Stopped
-Home Assistant      | Home automation        | Running
-Jellyfin            | Media library          | Running
-Palworld Server     | Palworld server        | Unused
-Pterodactyl         | General game server    | Running
-qBittorrent         | Torrent client         | Stopped
+### Services list
+Name                | Purpose                  | Status
+------------------- | ------------------------ | -------
+Caddy               | Reverse proxy            | Running
+Crafty Controller   | Minecraft server panel   | Running
+File Browser        | Files sharing            | Running
+Gitea               | Git Server               | Running
+Gitea runner        | Actions runner for Gitea | Running
+Gluetun             | VPN Client               | Stopped
+Home Assistant      | Home automation          | Running
+Jellyfin            | Media library            | Running
+Palworld Server     | Palworld server          | Unused
+Pterodactyl         | General game server      | Running
+qBittorrent         | Torrent client           | Stopped

@@ -1,14 +1,29 @@
 services:
+
   gitea:
     container_name: gitea
-    image: docker.gitea.com/gitea:1.24.4-rootless
+    image: docker.gitea.com/gitea:latest
     restart: unless-stopped
-    user: "997"
     volumes:
-      - /docker/appdata/gitea/data:/var/lib/gitea
-      - /docker/appdata/gitea/config:/etc/gitea
+      - /docker/appdata/gitea:/data
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "3000:3000"
       - "2222:2222"
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+
+  runner:
+    container_name: gitea_runner
+    image: gitea/act_runner:latest
+    restart: unless-stopped
+    depends_on:
+      - gitea
+    environment:
+      - GITEA_INSTANCE_URL=${GITEA_INSTANCE_URL}
+      - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
+    volumes:
+      - /docker/appdata/gitea_runner/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
