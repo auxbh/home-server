@@ -1,0 +1,1 @@
+rsync --recursive --compress --delete --progress --exclude={'README.md','.gitignore'} -e 'ssh -p 22' . user@example.com:/docker/compose
