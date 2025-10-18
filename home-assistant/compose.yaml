@@ -14,3 +14,14 @@ services:
     privileged: true
     ports:
       - "8123:8123"
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    volumes:
+      - /docker/appdata/mosquitto/config:/mosquitto/config
+      - /docker/appdata/mosquitto/data:/mosquitto/data
+      - /docker/appdata/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001
