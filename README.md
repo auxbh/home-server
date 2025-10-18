@@ -18,6 +18,7 @@ Gitea runner        | Actions runner for Gitea | Running
 Gluetun             | VPN Client               | Stopped
 Home Assistant      | Home automation          | Running
 Jellyfin            | Media library            | Running
+Mosquitto           | MQTT Broker              | Running
 Palworld Server     | Palworld server          | Unused
 Pterodactyl         | General game server      | Running
 qBittorrent         | Torrent client           | Stopped
