@@ -24,6 +24,7 @@ services:
     environment:
       - GITEA_INSTANCE_URL=${GITEA_INSTANCE_URL}
       - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
+      - GITEA_RUNNER_LABELS=ubuntu-22.04-v25.04.01:docker://gitea/runner-images:ubuntu-22.04-v25.04.01
     volumes:
       - /docker/appdata/gitea_runner/data:/data
       - /var/run/docker.sock:/var/run/docker.sock

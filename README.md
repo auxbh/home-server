@@ -7,10 +7,9 @@ CPU: AMD Ryzen 5 5500U<br>
 RAM: 32GB DDR4<br>
 STORAGE: 512GB M.2 SSD
 
-### Services list
+### Containers list
 Name                | Purpose                  | Status
 ------------------- | ------------------------ | -------
-Caddy               | Reverse proxy            | Running
 Crafty Controller   | Minecraft server panel   | Running
 File Browser        | Files sharing            | Running
 Gitea               | Git Server               | Running
