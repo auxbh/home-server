@@ -14,10 +14,9 @@ Crafty Controller   | Minecraft server panel   | Running
 File Browser        | Files sharing            | Running
 Gitea               | Git Server               | Running
 Gitea runner        | Actions runner for Gitea | Running
-Gluetun             | VPN Client               | Stopped
+Gluetun             | VPN Client               | Running
 Home Assistant      | Home automation          | Running
 Jellyfin            | Media library            | Running
-Mosquitto           | MQTT Broker              | Running
 Palworld Server     | Palworld server          | Unused
 Pterodactyl         | General game server      | Running
-qBittorrent         | Torrent client           | Stopped
+qBittorrent         | Torrent client           | Running
