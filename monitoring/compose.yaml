@@ -1,0 +1,22 @@
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    user: '997'
+    ports:
+      - '3003:3000'
+    volumes:
+      - '/docker/appdata/grafana:/var/lib/grafana'
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    user: "997:997"
+    volumes:
+      - /docker/appdata/prometheus:/prometheus
+    ports:
+     - '3004:9090'
+    restart: unless-stopped
+    command:
+      - '--config.file=/prometheus/prometheus.yml'
