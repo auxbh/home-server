@@ -18,7 +18,7 @@ Gitea runner        | Actions runner for Gitea | Running
 Gluetun             | VPN Client               | Running
 Grafana             | Monitoring dashboard     | Running
 Home Assistant      | Home automation          | Running
-Jellyfin            | Media library            | Running
+Navidrome           | Music library            | Running
 Palworld Server     | Palworld server          | Unused
 Prometheus          | Metrics monitoring       | Running
 Pterodactyl         | General game server      | Running
