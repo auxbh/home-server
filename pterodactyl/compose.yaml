@@ -36,7 +36,7 @@ x-common:
 services:
   database:
     image: mariadb:10.5
-    restart: always
+    restart: unless-stopped
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - "/docker/appdata/pterodactyl/database:/var/lib/mysql"
@@ -47,11 +47,11 @@ services:
   
   cache:
     image: redis:alpine
-    restart: always
+    restart: unless-stopped
   
   panel:
     image: ghcr.io/pterodactyl/panel:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - "8080:80"
       #- "7443:443"
@@ -77,7 +77,7 @@ services:
 
   wings:
     image: ghcr.io/pterodactyl/wings:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - "8081:8080"
       - "2022:2022"
