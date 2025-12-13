@@ -3,12 +3,10 @@ services:
     container_name: filebrowser
     image: filebrowser/filebrowser:latest
     volumes:
-      - "/docker/appdata/filebrowser/filebrowser.db:/filebrowser.db"
-      - "/docker/appdata/filebrowser/filebrowser.json:/.filebrowser.json"
+      - "/docker/appdata/filebrowser:/database"
+      - "/docker/appdata/filebrowser:/config"
       - "/srv/www/files:/srv"
     restart: unless-stopped
     ports:
       - "8090:80"
-    environment:
-      - PUID=997
-      - PGID=997
+    user: "1001:1001"
